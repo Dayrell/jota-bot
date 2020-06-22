@@ -8,6 +8,8 @@ def get_tweets_dataframe(output_path):
 def remove_tweets_with_mentions(df):
     df = df[~df.tweet.str.contains("@")]
     df = df[~df.tweet.str.contains("http")]
+    df = df[~df.tweet.str.contains(".com")]
+
 
     return df
 
