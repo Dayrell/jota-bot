@@ -3,7 +3,7 @@ import sys
 import datetime
 
 def get_yesterday_date():
-    yesterday = datetime.date.today() - datetime.timedelta(days=1)
+    yesterday = datetime.date.today() - datetime.timedelta(days=45)
     return yesterday.strftime("%Y-%m-%d %H:%M:%S")
 
 def get_tweets(output_path, user_name):
@@ -12,6 +12,7 @@ def get_tweets(output_path, user_name):
     c.Store_csv = True
     c.Output = output_path
     c.Since = get_yesterday_date()
+    c.Hide_output = True
 
     twint.run.Search(c)
 
