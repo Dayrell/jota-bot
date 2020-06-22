@@ -3,7 +3,7 @@ import sys
 import datetime
 
 def get_yesterday_date():
-    yesterday = datetime.date.today() - datetime.timedelta(days=45)
+    yesterday = datetime.date.today() - datetime.timedelta(days=1)
     return yesterday.strftime("%Y-%m-%d %H:%M:%S")
 
 def get_tweets(output_path, user_name):
