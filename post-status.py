@@ -27,7 +27,7 @@ def generate_message(tweets_list):
     
 def create_config():
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read(sys.argv[2])
     return config['twitter']['consumer_key'], config['twitter']['consumer_secret'], config['twitter']['access_token'], config['twitter']['access_token_secret']
 
 
