@@ -11,7 +11,9 @@ def remove_tweets_with_mentions(df):
     df = df[~df.tweet.str.contains("@")]
     df = df[~df.tweet.str.contains("http")]
     df = df[~df.tweet.str.contains(".com")]
-
+    df = df[~df.tweet.str.contains("inara")]
+    df = df[~df.tweet.str.contains("Inara")]
+    df = df[~df.tweet.str.contains("INARA")]
 
     return df
 
